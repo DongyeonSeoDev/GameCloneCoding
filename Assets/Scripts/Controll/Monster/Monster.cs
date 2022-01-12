@@ -18,7 +18,7 @@ namespace Monster
                 moveSpeed = 5f,
                 hp = 50,
                 attackValue = 10,
-                castleAttackableDistance = 1f,
+                castleAttackableDistance = 3f,
                 damagedValue = 0,
                 isDamaged = false
             };
@@ -28,6 +28,7 @@ namespace Monster
             if (monsterAttackCheck != null)
             {
                 monsterAttackCheck.SetAttackValue(monsterData.attackValue);
+                monsterAttackCheck.gameObject.SetActive(false);
             }
 
             currentState = new Run(monsterData);
