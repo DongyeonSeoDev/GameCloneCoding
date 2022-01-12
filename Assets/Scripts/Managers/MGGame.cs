@@ -9,7 +9,7 @@ public class MGGame : MonoBehaviour
     // public MGMinion _gMinionManager;
     // public MGHero.MGHero _gHeroManager;
 
-    List<CONEntity> heroConList = new List<CONEntity>();
+    //List<CONEntity> heroConList = new List<CONEntity>();
 
     void Awake()
     {
@@ -25,8 +25,10 @@ public class MGGame : MonoBehaviour
         // Global._gameStat = eGameStatus.Playing;
 
         GameObject.Instantiate(Global.prefabsDic[ePrefabs.MainCamera]);
+        GameObject.Instantiate(Global.prefabsDic[ePrefabs.Castle]);
+        GameObject.Instantiate(Global.prefabsDic[ePrefabs.MonsterSpawner]);
 
-        heroConList.Clear();
+        //heroConList.Clear();
     }
 
     void OnEnable()
@@ -37,24 +39,6 @@ public class MGGame : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            CONEntity heroCon = GameSceneClass.gMGPool.CreateObj(ePrefabs.HeroGirl, Random.insideUnitCircle);
-            heroConList.Add(heroCon);
-        }
-
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            if (heroConList.Count > 0)
-            {
-                heroConList[heroConList.Count - 1].SetActive(false);
-                heroConList.RemoveAt(heroConList.Count - 1);
-            }
-
-        }
-
-
-
         // if (Global._gameStat == eGameStatus.Playing)
         // {
         //     if (Global._gameMode == eGameMode.Collect)

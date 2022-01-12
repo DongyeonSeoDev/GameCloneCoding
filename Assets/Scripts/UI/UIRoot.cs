@@ -27,7 +27,6 @@ public class UIRoot : MonoBehaviour
 
         rootCanvas.referenceResolution = Global.referenceResolution;
     }
-
    
     void Update()
     {

@@ -4,11 +4,17 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< Updated upstream
   - Archer
   - Hero
   - Arrow
   - Enemy
   - Waypoint
+=======
+  - Castle
+  - Enemy
+  - CastleHP
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
@@ -45,4 +51,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Enemy
+    uniqueID: 3250290555
     locked: 0

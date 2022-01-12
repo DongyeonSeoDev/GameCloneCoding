@@ -5,28 +5,16 @@ using UnityEngine.UI;
 
 public class UIRootGame : MonoBehaviour
 {
-    [SerializeField]
-    private Image testImage;
-
     void Awake()
     {
         GameSceneClass.gUiRootGame = this;
     }
 
-    private void Update() 
+    private void Start()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            List<string> keyList = new List<string>(Global.spritesDic.Keys);
-            int randomIdx = Random.Range(0, keyList.Count - 1);
-            
-            testImage.sprite = Global.spritesDic[keyList[randomIdx]];
-            testImage.SetNativeSize();
-        }
-    }
+        Canvas canvas = transform.GetComponentInParent<Canvas>();
 
-    public void TestFunc()
-    {
-        print("call UIRootGame");
+        canvas.renderMode = RenderMode.ScreenSpaceCamera;
+        canvas.worldCamera = Camera.main;
     }
 }
