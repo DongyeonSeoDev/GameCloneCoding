@@ -16,4 +16,9 @@ MonoBehaviour:
   arrowSpeed: 12
   attackDelay: 1.2
   moveSpeed: 1.2
-  scale: {x: 0.7, y: 0.7}
+  scale: {x: 1.4, y: 1.4}
+  skillAtkEnemyCnt: 8
+  skillDamage: 70
+  skillSpirte: {fileID: 0}
+  skillNeedMp: 7
+  skillEffect: {fileID: 100006, guid: ea4ce2b1817aec64f9a23ae028ffe62c, type: 3}

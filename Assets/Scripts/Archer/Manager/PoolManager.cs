@@ -17,6 +17,11 @@ namespace One
         }
 
         public static GameObject GetItem(string key) => poolDic[key].GetItem();
+
+        public static void ClearPool()
+        {
+            poolDic.Clear();
+        }
     }
 
     public class Pool
@@ -53,5 +58,7 @@ namespace One
             queue.Enqueue(o);
             return o;
         }
+
+       
     }
 }

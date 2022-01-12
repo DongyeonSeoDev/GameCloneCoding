@@ -29,7 +29,7 @@ public class Arrow : MonoBehaviour
        
         this.target = target;
 
-        inactiveTime = Time.time + 1f;
+        inactiveTime = Time.time + 1.5f;
     }
 
     private void LateUpdate()
@@ -52,13 +52,12 @@ public class Arrow : MonoBehaviour
         float vy = t * vx;
 
         //Debug.Log(vx + " " + vy);
-        
+
         rigid.velocity = new Vector2(vx, vy);
 
-        transform.rotation = Quaternion.Euler(0,0, Mathf.Atan2(vy , vx) * Mathf.Rad2Deg );
+        transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(vy, vx) * Mathf.Rad2Deg);
 
-
-        if(Time.time>inactiveTime)
+        if (Time.time>inactiveTime)
         {
             gameObject.SetActive(false);
         }
@@ -68,7 +67,7 @@ public class Arrow : MonoBehaviour
     {
         if(collision.CompareTag("Enemy"))
         {
-            //collision.GetComponent<Monster.Monster>().GetDamaged(damage);
+            collision.GetComponent<Monster.Monster>().GetDamaged(damage);
             gameObject.SetActive(false);
         }
     }

@@ -28,6 +28,8 @@ namespace One
         public override void Execute()
         {
             archer.UseSkill();
+            UnityEngine.Debug.Log("SkillTest");
+            
         }
     }
 

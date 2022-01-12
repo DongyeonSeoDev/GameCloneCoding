@@ -61,7 +61,7 @@ namespace One
 
     public class Patrol : State
     {
-        int curIndex = 0;
+        static int curIndex = 0;
         float speed;
 
         public Patrol(GameObject obj, Animator anim, float speed)

@@ -12,5 +12,12 @@ public class ArcherSO : ScriptableObject
 
     public Vector2 scale;
 
+
+    public int skillAtkEnemyCnt;
+    public int skillDamage;
+    public Sprite skillSpirte;
+    public int skillNeedMp;
+    public GameObject skillEffect;
+
     //public Sprite sprite;
 }
