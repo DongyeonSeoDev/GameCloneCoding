@@ -22,7 +22,7 @@ public class Hero : Archer
         curState = new Patrol(gameObject, anim, archerSO.moveSpeed);
 
         Instantiate(ArcherGameManager.Instance.skillBtnPrefab, ArcherGameManager.Instance.skillBtnParent)
-            .GetComponent<SkillButton>().SetSkillInfo(archerSO.skillNeedMp, archerSO.skillSpirte,()=>UseSkill() /*skillCmd*/);
+            .GetComponent<SkillButton>().SetSkillInfo(archerSO.skillNeedMp, archerSO.skillSpirte,skillCmd);
     }
 
     public void SetTarget(Transform target)
@@ -33,6 +33,8 @@ public class Hero : Archer
     private void Update()
     {
         curState = curState.Process();
+
+        
     }
 
     public override void Attack()

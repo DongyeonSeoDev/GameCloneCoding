@@ -13,12 +13,12 @@ public class SkillButton : MonoBehaviour
         btn = GetComponent<Button>();
     }
 
-    public void SetSkillInfo(int mp,Sprite sprite ,System.Action a /*Command cmd*/)
+    public void SetSkillInfo(int mp,Sprite sprite ,Command cmd)
     {
         transform.GetChild(0).GetComponent<Text>().text = mp.ToString();
         btn.image.sprite = sprite;
-        btn.onClick.AddListener(()=>a());
+        //btn.onClick.AddListener(()=>a());
         //cmd.Execute();
-        //btn.onClick.AddListener(() => cmd.Execute());
+        btn.onClick.AddListener(() => { Debug.Log("Skill button"); cmd.Execute(); });
     }
 }

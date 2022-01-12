@@ -13,6 +13,7 @@ namespace One
             if(!poolDic.ContainsKey(prefab.name))
             {
                 poolDic.Add(prefab.name, new Pool(prefab,parent,count));
+                Debug.Log(prefab.name);
             }
         }
 

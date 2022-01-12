@@ -3,17 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-<<<<<<< Updated upstream
   tags: []
-=======
-  tags:
-  - Enemy
-  - Waypoint
-  - Castle
-  - CastleHP
-  - WaveUI
-  - GameOver
->>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
@@ -51,9 +41,3 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-<<<<<<< Updated upstream
-=======
-  - name: Monster
-    uniqueID: 1106469775
-    locked: 0
->>>>>>> Stashed changes
